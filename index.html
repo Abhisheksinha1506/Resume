@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full Stack Developer Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg-dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 2.5rem;
+            }
+        }
+
+        /* Animated Mesh Background */
+        .mesh-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .mesh-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+        }
+
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--primary);
+            filter: blur(120px);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -2;
+            animation: float 20s infinite alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(10%, 10%) scale(1.1);
+            }
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mesh Background Elements -->
+    <div class="mesh-container">
+        <div class="blob" style="top: -10%; left: -10%; background: #6366f1;"></div>
+        <div class="blob" style="bottom: -10%; right: -10%; background: #a855f7; animation-delay: -5s;"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto glass-card p-6 md:p-10 rounded-2xl md:rounded-3xl relative z-10 overflow-hidden">
+
+
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row justify-between items-start border-b pb-6 mb-6 gap-4">
+            <div>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">Abhishek Sinha</h1>
+                <h2 class="text-xl md:text-2xl font-semibold text-indigo-600">React Developer & AWS Engineer</h2>
+            </div>
+            <div class="text-left md:text-right space-y-1">
+                <p class="text-gray-600 text-sm md:text-base"><a href="tel:++91-7507897225">📞 +91-7507897225</a></p>
+                <p class="text-gray-600 text-sm md:text-base"><a href="mailto:abhisheksinha1594@gmail.com">✉️
+                        abhisheksinha1594@gmail.com</a>
+                </p>
+                <p class="text-gray-600 text-sm md:text-base"><a
+                        href="https://www.linkedin.com/in/abhisheksinha1506/">🔗
+                        in/abhisheksinha1506</a></p>
+                <p class="text-gray-600 text-sm md:text-base">📍 Bengaluru, Karnataka</p>
+            </div>
+        </div>
+
+        <!-- Main Content: Split into Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+
+            <!-- Column 1 -->
+            <div class="col-span-1">
+                <!-- Professional Summary -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Professional Summary</h3>
+                    <p class="text-gray-600 mt-2">
+                        Results-driven React Developer & AWS Engineer with 5+ years of experience building scalable
+                        web applications and cloud-native systems on time through vibe coding and AI-assisted prompt
+                        engineering. Skilled in Python, Django, Next.js, REST APIs, and AWS (Cognito, DynamoDB, Lambda,
+                        S3). Proven success in improving system performance (20%+), implementing secure authentication
+                        and RBAC.
+                    </p>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Skills</h3>
+                    <div class="mt-4">
+                        <h4 class="text-lg font-bold text-indigo-600">Frontend</h4>
+                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                            <li>Angular, React, Next.js</li>
+                            <li>TypeScript, JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-indigo-600">Backend</h4>
+                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                            <li>Python, Django</li>
+                            <li>SQL Server, Celery, Redis</li>
+                            <li>RESTful APIs</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-indigo-600">Cloud & DevOps</h4>
+                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                            <li>AWS Cognito, DynamoDB</li>
+                            <li>AWS Lambda, S3</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-span-1">
+                <!-- Experience Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Experience</h3>
+
+                    <!-- Job 1 -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-bold text-gray-900">AWS Engineer / Full Stack Developer</h4>
+                        <p class="text-indigo-600">Digital Refresh Networks</p>
+                        <p class="text-gray-600">Aug 2025 – Present</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                            <li>Collaborated on full-stack development integrating Next.js frontend with AWS back-end
+                                services, improving scalability and user experience.</li>
+                            <li>Developed a secure authentication system using AWS Cognito with role-based access
+                                control for Admin, Agency, and Client groups.</li>
+                            <li>Integrated Amazon S3 to build a scalable feedback system for creative submissions,
+                                enabling efficient file upload/retrieval with minimal latency.</li>
+                            <li>Integrated AWS DynamoDB for access control logic, optimizing performance and enhancing
+                                data security.</li>
+                            <li>Built AWS Lambda functions to synchronize Cognito with DynamoDB, ensuring real-time
+                                credential and status updates.</li>
+                            <li>Leveraged vibe coding and precision prompt engineering to accelerate architecture and
+                                enable rapid deployment ahead of schedule.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-gray-900">Full Stack Developer</h4>
+                        <p class="text-indigo-600">Ven Analytics</p>
+                        <p class="text-gray-600">Jan 2024 – Jun 2025</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-2">
+                            <li>Built Angular frontend from Lovable designs, supporting 10,000+ MAU and improving system
+                                performance by 15%.</li>
+                            <li>Integrated OpenAI API into a Django application, creating a chat interface that reduced
+                                user navigation time by 10%.</li>
+                            <li>Implemented task queuing and async processing with Celery and Redis, improving
+                                background task efficiency by 20%.</li>
+                            <li>Conducted code reviews ensuring adherence to coding standards and Clean Code principles.
+                            </li>
+                            <li>Onboarded and trained 5 new developers on Django workflows, improving team productivity
+                                by 15%.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-span-1">
+                <!-- Projects Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Projects</h3>
+
+                    <!-- Project 1 -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-bold text-gray-900">AWS-Powered Feedback System</h4>
+                        <p class="text-gray-600 mt-2">
+                            Built a secure, scalable feedback system integrating Amazon S3 for file storage, AWS Cognito
+                            for authentication, and DynamoDB for access control. Supported multi-role workflows with
+                            real-time Lambda-based sync.
+                        </p>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-gray-900">AI-Enhanced Analytics Platform</h4>
+                        <p class="text-gray-600 mt-2">
+                            Developed a full-stack analytics platform using Angular and Django with OpenAI API
+                            integration. Implemented Celery and Redis for async task processing, supporting 10,000+
+                            monthly active users.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Education</h3>
+                    <div class="mt-4">
+                        <div class="mb-4">
+                            <h4 class="text-lg font-bold text-gray-900">Bachelor of Science in Computer Science</h4>
+                            <p class="text-indigo-600">Stanford University</p>
+                            <p class="text-gray-600">2012 - 2016 | GPA: 3.9 / 4.0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications Section -->
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800">Certifications</h3>
+                    <div class="mt-4">
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>AWS Certified Solutions Architect</li>
+                            <li>Google Professional Cloud Developer</li>
+                            <li>Certified Kubernetes Administrator (CKA)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Strengths Section -->
+                <section>
+                    <h3 class="text-xl font-semibold text-gray-800">Strengths</h3>
+                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                        <li>Strong communicator with experience onboarding and mentoring junior developers.</li>
+                        <li>Skilled in AI-assisted development and prompt engineering for rapid delivery.</li>
+                        <li>Thrives in fast-paced environments, consistently delivering projects ahead of schedule.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
